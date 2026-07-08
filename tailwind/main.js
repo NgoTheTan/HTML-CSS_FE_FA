@@ -1,7 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
-    // ----------------------------------------------------
-    // 1. Navbar Shrink & Solid Background on Scroll
-    // ----------------------------------------------------
+    // Navbar Shrink & Solid Background on Scroll
     const navbar = document.getElementById('navbar');
     const logo = document.getElementById('navbar-logo-img');
     
@@ -35,9 +33,7 @@ document.addEventListener('DOMContentLoaded', () => {
     window.addEventListener('scroll', handleScroll);
     window.addEventListener('resize', handleScroll);
 
-    // ----------------------------------------------------
-    // 2. Mobile Menu Toggle
-    // ----------------------------------------------------
+    // Mobile Menu Toggle
     const menuBtn = document.getElementById('menu-btn');
     const navbarLinks = document.getElementById('navbar-links');
     
@@ -48,7 +44,6 @@ document.addEventListener('DOMContentLoaded', () => {
             navbarLinks.classList.toggle('flex');
         });
         
-        // Close menu when clicking outside
         document.addEventListener('click', (e) => {
             if (!navbarLinks.classList.contains('hidden') && !navbar.contains(e.target)) {
                 navbarLinks.classList.add('hidden');
@@ -56,7 +51,6 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
         
-        // Close menu when clicking a link
         const links = navbarLinks.querySelectorAll('a');
         links.forEach(link => {
             link.addEventListener('click', () => {
@@ -66,9 +60,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // ----------------------------------------------------
-    // 3. Portfolio Modal Controls
-    // ----------------------------------------------------
+    // Portfolio Modal Controls
     const portfolioItems = document.querySelectorAll('.portfolio-item');
     const modalOverlays = document.querySelectorAll('.portfolio-modal-overlay');
     
@@ -93,19 +85,17 @@ document.addEventListener('DOMContentLoaded', () => {
     
     // Setup close listeners for all modals
     modalOverlays.forEach(modal => {
-        // Close on 'x' button click
         const closeBtn = modal.querySelector('.close-modal-btn');
         if (closeBtn) {
             closeBtn.addEventListener('click', () => closeModal(modal));
         }
         
-        // Close on bottom action button click
         const actionCloseBtn = modal.querySelector('.modal-close-action-btn');
         if (actionCloseBtn) {
             actionCloseBtn.addEventListener('click', () => closeModal(modal));
         }
         
-        // Close on clicking outside the container (on the overlay background)
+
         modal.addEventListener('click', (e) => {
             if (e.target === modal) {
                 closeModal(modal);
@@ -113,9 +103,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // ----------------------------------------------------
-    // 4. Scrollspy (Highlight Navbar Link on Scroll)
-    // ----------------------------------------------------
+    // Scrollspy (Highlight Navbar Link on Scroll)
     const sections = document.querySelectorAll('section, header');
     const navAnchors = document.querySelectorAll('#navbar-links a');
     
