@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Caterpillar - Studio Website (Tailwind Version)</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto+Slab:wght@300;400;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Tailwind Custom Config -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        yellow: {
+                            light: '#fec503',
+                            DEFAULT: '#fed136',
+                        },
+                        dark: '#212529',
+                        light: '#f8f9fa',
+                        muted: '#6c757d',
+                    },
+                    fontFamily: {
+                        sans: ['Roboto', 'sans-serif'],
+                        montserrat: ['Montserrat', 'sans-serif'],
+                        serif: ['"Roboto Slab"', 'serif'],
+                    },
+                    keyframes: {
+                        modalFadeIn: {
+                            'from': { opacity: '0', transform: 'translateY(-50px)' },
+                            'to': { opacity: '1', transform: 'translateY(0)' }
+                        }
+                    },
+                    animation: {
+                        modalFadeIn: 'modalFadeIn 0.3s ease-out'
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="font-sans text-dark bg-white overflow-x-hidden">
+
+    <!-- Navigation Bar -->
+    <nav class="fixed top-0 left-0 right-0 z-50 py-4 lg:py-6 bg-dark lg:bg-transparent transition-all duration-300" id="navbar">
+        <div class="max-w-6xl mx-auto px-4 md:px-9 lg:px-4 flex flex-wrap justify-between items-center w-full">
+            <a href="#" class="block">
+                <img src="../resources/navbar-logo.png" alt="CATERPILLAR" class="h-11 md:h-11 lg:h-[60px] block transition-all duration-300" id="navbar-logo-img">
+            </a>
+            <button class="flex items-center gap-2 lg:hidden bg-yellow text-dark border-none py-2.5 px-4 text-xs font-montserrat font-bold rounded uppercase cursor-pointer" id="menu-btn">
+                MENU <i class="fas fa-bars"></i>
+            </button>
+            <ul class="hidden lg:flex flex-col lg:flex-row w-full lg:w-auto list-none gap-4 lg:gap-8 pt-4 lg:pt-0 pb-2 lg:pb-0" id="navbar-links">
+                <li><a href="#services" class="text-white hover:text-yellow font-montserrat font-normal text-[14px] tracking-wider transition-colors duration-200 navbar-link">SERVICES</a></li>
+                <li><a href="#portfolio" class="text-white hover:text-yellow font-montserrat font-normal text-[14px] tracking-wider transition-colors duration-200 navbar-link">PORTFOLIO</a></li>
+                <li><a href="#about" class="text-white hover:text-yellow font-montserrat font-normal text-[14px] tracking-wider transition-colors duration-200 navbar-link">ABOUT</a></li>
+                <li><a href="#team" class="text-white hover:text-yellow font-montserrat font-normal text-[14px] tracking-wider transition-colors duration-200 navbar-link">TEAM</a></li>
+                <li><a href="#contact" class="text-white hover:text-yellow font-montserrat font-normal text-[14px] tracking-wider transition-colors duration-200 navbar-link">CONTACT</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Header / Hero Section -->
+    <header class="min-h-[420px] md:min-h-[550px] lg:min-h-screen bg-[linear-gradient(rgba(0,0,0,0.25),rgba(0,0,0,0.25)),url('../resources/header-bg.jpg')] bg-no-repeat bg-center bg-cover flex justify-center items-center text-center color-white mt-[74px] lg:mt-0 pt-[100px]">
+        <div class="max-w-6xl mx-auto px-4 flex flex-col items-center text-white">
+            <div class="font-serif italic text-2xl md:text-3xl lg:text-[40px] mb-4 md:mb-5 lg:mb-6 font-light">Welcome To Our Studio!</div>
+            <h1 class="text-3xl md:text-[55px] lg:text-[75px] leading-[36px] md:leading-[55px] lg:leading-[75px] font-bold font-montserrat mb-8 md:mb-10 lg:mb-12 tracking-wide uppercase">
+                <span class="whitespace-nowrap">IT'S NICE TO MEET</span> <br class="block lg:hidden">YOU
+            </h1>
+            <a href="#services" class="inline-block font-montserrat font-bold text-center py-4 md:py-5 px-8 md:px-11 text-base md:text-lg rounded bg-yellow text-white uppercase hover:bg-yellow-light hover:scale-[1.02] transition-all duration-300 cursor-pointer">TELL ME MORE</a>
+        </div>
+    </header>
+
+    <!-- Services Section -->
+    <section id="services" class="py-16 md:py-20 lg:py-24 bg-white">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="text-center mb-12 md:mb-16 lg:mb-20">
+                <h2 class="text-3xl md:text-[40px] font-bold font-montserrat mb-4 tracking-[1px]">SERVICES</h2>
+                <p class="font-serif italic text-base text-muted font-light">Lorem ipsum dolor sit amet consectetur.</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-10 md:gap-8 text-center">
+                <!-- Service 1 -->
+                <div class="px-2.5">
+                    <div class="w-[120px] h-[120px] bg-yellow rounded-full flex items-center justify-center mx-auto mb-[25px]">
+                        <i class="fas fa-shopping-cart text-white text-[55px]"></i>
+                    </div>
+                    <h3 class="text-xl md:text-2xl font-bold mb-4 font-montserrat">E-Commerce</h3>
+                    <p class="text-muted text-[14.5px] leading-relaxed">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.</p>
+                </div>
+                <!-- Service 2 -->
+                <div class="px-2.5">
+                    <div class="w-[120px] h-[120px] bg-yellow rounded-full flex items-center justify-center mx-auto mb-[25px]">
+                        <i class="fas fa-laptop text-white text-[55px]"></i>
+                    </div>
+                    <h3 class="text-xl md:text-2xl font-bold mb-4 font-montserrat">Responsive Design</h3>
+                    <p class="text-muted text-[14.5px] leading-relaxed">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.</p>
+                </div>
+                <!-- Service 3 -->
+                <div class="px-2.5">
+                    <div class="w-[120px] h-[120px] bg-yellow rounded-full flex items-center justify-center mx-auto mb-[25px]">
+                        <i class="fas fa-lock text-white text-[55px]"></i>
+                    </div>
+                    <h3 class="text-xl md:text-2xl font-bold mb-4 font-montserrat">Web Security</h3>
+                    <p class="text-muted text-[14.5px] leading-relaxed">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="py-16 md:py-20 lg:py-24 bg-light">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="text-center mb-12 md:mb-16 lg:mb-20">
+                <h2 class="text-3xl md:text-[40px] font-bold font-montserrat mb-4 tracking-[1px]">PORTFOLIO</h2>
+                <p class="font-serif italic text-base text-muted font-light">Lorem ipsum dolor sit amet consectetur.</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-7 md:gap-8">
+                <!-- Project 1 -->
+                <div class="bg-white shadow-[0_0_15px_rgba(0,0,0,0.05)] hover:translate-y-[-5px] hover:shadow-[0_5px_20px_rgba(0,0,0,0.1)] transition-all duration-300 cursor-pointer group portfolio-item" data-modal="portfolio-modal-1">
+                    <div class="relative overflow-hidden block">
+                        <div class="absolute inset-0 bg-yellow/90 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center z-10">
+                            <i class="fas fa-plus text-white text-5x fa-3x"></i>
+                        </div>
+                        <img class="w-full block transition-transform duration-300 group-hover:scale-105" src="../resources/portfolio/01-thumbnail.jpg" alt="Threads">
+                    </div>
+                    <div class="p-6 text-center">
+                        <h4 class="text-xl font-bold mb-1 tracking-wide font-montserrat">Threads</h4>
+                        <p class="font-serif italic text-sm text-muted">Illustration</p>
+                    </div>
+                </div>
+                <!-- Project 2 -->
+                <div class="bg-white shadow-[0_0_15px_rgba(0,0,0,0.05)] hover:translate-y-[-5px] hover:shadow-[0_5px_20px_rgba(0,0,0,0.1)] transition-all duration-300 cursor-pointer group portfolio-item" data-modal="portfolio-modal-2">
+                    <div class="relative overflow-hidden block">
+                        <div class="absolute inset-0 bg-yellow/90 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center z-10">
+                            <i class="fas fa-plus text-white text-5x fa-3x"></i>
+                        </div>
+                        <img class="w-full block transition-transform duration-300 group-hover:scale-105" src="../resources/portfolio/02-thumbnail.jpg" alt="Explore">
+                    </div>
+                    <div class="p-6 text-center">
+                        <h4 class="text-xl font-bold mb-1 tracking-wide font-montserrat">Explore</h4>
+                        <p class="font-serif italic text-sm text-muted">Graphic Design</p>
+                    </div>
+                </div>
+                <!-- Project 3 -->
+                <div class="bg-white shadow-[0_0_15px_rgba(0,0,0,0.05)] hover:translate-y-[-5px] hover:shadow-[0_5px_20px_rgba(0,0,0,0.1)] transition-all duration-300 cursor-pointer group portfolio-item" data-modal="portfolio-modal-3">
+                    <div class="relative overflow-hidden block">
+                        <div class="absolute inset-0 bg-yellow/90 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center z-10">
+                            <i class="fas fa-plus text-white text-5x fa-3x"></i>
+                        </div>
+                        <img class="w-full block transition-transform duration-300 group-hover:scale-105" src="../resources/portfolio/03-thumbnail.jpg" alt="Finish">
+                    </div>
+                    <div class="p-6 text-center">
+                        <h4 class="text-xl font-bold mb-1 tracking-wide font-montserrat">Finish</h4>
+                        <p class="font-serif italic text-sm text-muted">Identity</p>
+                    </div>
+                </div>
+                <!-- Project 4 -->
+                <div class="bg-white shadow-[0_0_15px_rgba(0,0,0,0.05)] hover:translate-y-[-5px] hover:shadow-[0_5px_20px_rgba(0,0,0,0.1)] transition-all duration-300 cursor-pointer group portfolio-item" data-modal="portfolio-modal-4">
+                    <div class="relative overflow-hidden block">
+                        <div class="absolute inset-0 bg-yellow/90 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center z-10">
+                            <i class="fas fa-plus text-white text-5x fa-3x"></i>
+                        </div>
+                        <img class="w-full block transition-transform duration-300 group-hover:scale-105" src="../resources/portfolio/04-thumbnail.jpg" alt="Lines">
+                    </div>
+                    <div class="p-6 text-center">
+                        <h4 class="text-xl font-bold mb-1 tracking-wide font-montserrat">Lines</h4>
+                        <p class="font-serif italic text-sm text-muted">Branding</p>
+                    </div>
+                </div>
+                <!-- Project 5 -->
+                <div class="bg-white shadow-[0_0_15px_rgba(0,0,0,0.05)] hover:translate-y-[-5px] hover:shadow-[0_5px_20px_rgba(0,0,0,0.1)] transition-all duration-300 cursor-pointer group portfolio-item" data-modal="portfolio-modal-5">
+                    <div class="relative overflow-hidden block">
+                        <div class="absolute inset-0 bg-yellow/90 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center z-10">
+                            <i class="fas fa-plus text-white text-5x fa-3x"></i>
+                        </div>
+                        <img class="w-full block transition-transform duration-300 group-hover:scale-105" src="../resources/portfolio/05-thumbnail.jpg" alt="Southwest">
+                    </div>
+                    <div class="p-6 text-center">
+                        <h4 class="text-xl font-bold mb-1 tracking-wide font-montserrat">Southwest</h4>
+                        <p class="font-serif italic text-sm text-muted">Website Design</p>
+                    </div>
+                </div>
+                <!-- Project 6 -->
+                <div class="bg-white shadow-[0_0_15px_rgba(0,0,0,0.05)] hover:translate-y-[-5px] hover:shadow-[0_5px_20px_rgba(0,0,0,0.1)] transition-all duration-300 cursor-pointer group portfolio-item" data-modal="portfolio-modal-6">
+                    <div class="relative overflow-hidden block">
+                        <div class="absolute inset-0 bg-yellow/90 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center z-10">
+                            <i class="fas fa-plus text-white text-5x fa-3x"></i>
+                        </div>
+                        <img class="w-full block transition-transform duration-300 group-hover:scale-105" src="../resources/portfolio/06-thumbnail.jpg" alt="Window">
+                    </div>
+                    <div class="p-6 text-center">
+                        <h4 class="text-xl font-bold mb-1 tracking-wide font-montserrat">Window</h4>
+                        <p class="font-serif italic text-sm text-muted">Photography</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Section -->
+    <section id="team" class="py-16 md:py-20 lg:py-24 bg-light">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="text-center mb-12 md:mb-16 lg:mb-20">
+                <h2 class="text-3xl md:text-[40px] font-bold font-montserrat mb-4 tracking-[1px]">OUR AMAZING TEAM</h2>
+                <p class="font-serif italic text-base text-muted font-light">Lorem ipsum dolor sit amet consectetur.</p>
+            </div>
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-12 text-center mb-12">
+                <!-- Member 1 -->
+                <div class="flex flex-col items-center">
+                    <div class="w-[225px] h-[225px] border-[7px] border-black/5 rounded-full overflow-hidden mb-6">
+                        <img src="../resources/team/1.jpg" alt="Kay Garland" class="w-full h-full object-cover">
+                    </div>
+                    <h4 class="text-[22px] font-bold font-montserrat mb-1">Kay Garland</h4>
+                    <p class="text-muted text-[15px] mb-5">Lead Designer</p>
+                    <div class="flex justify-center gap-4">
+                        <a href="#" class="w-10 h-10 rounded-full bg-dark text-white flex items-center justify-center hover:bg-yellow hover:text-dark hover:-translate-y-[3px] transition-all duration-300"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-dark text-white flex items-center justify-center hover:bg-yellow hover:text-dark hover:-translate-y-[3px] transition-all duration-300"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-dark text-white flex items-center justify-center hover:bg-yellow hover:text-dark hover:-translate-y-[3px] transition-all duration-300"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <!-- Member 2 -->
+                <div class="flex flex-col items-center">
+                    <div class="w-[225px] h-[225px] border-[7px] border-black/5 rounded-full overflow-hidden mb-6">
+                        <img src="../resources/team/2.jpg" alt="Larry Parker" class="w-full h-full object-cover">
+                    </div>
+                    <h4 class="text-[22px] font-bold font-montserrat mb-1">Larry Parker</h4>
+                    <p class="text-muted text-[15px] mb-5">Lead Marketer</p>
+                    <div class="flex justify-center gap-4">
+                        <a href="#" class="w-10 h-10 rounded-full bg-dark text-white flex items-center justify-center hover:bg-yellow hover:text-dark hover:-translate-y-[3px] transition-all duration-300"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-dark text-white flex items-center justify-center hover:bg-yellow hover:text-dark hover:-translate-y-[3px] transition-all duration-300"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-dark text-white flex items-center justify-center hover:bg-yellow hover:text-dark hover:-translate-y-[3px] transition-all duration-300"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <!-- Member 3 -->
+                <div class="flex flex-col items-center">
+                    <div class="w-[225px] h-[225px] border-[7px] border-black/5 rounded-full overflow-hidden mb-6">
+                        <img src="../resources/team/3.jpg" alt="Diana Petersen" class="w-full h-full object-cover">
+                    </div>
+                    <h4 class="text-[22px] font-bold font-montserrat mb-1">Diana Petersen</h4>
+                    <p class="text-muted text-[15px] mb-5">Lead Developer</p>
+                    <div class="flex justify-center gap-4">
+                        <a href="#" class="w-10 h-10 rounded-full bg-dark text-white flex items-center justify-center hover:bg-yellow hover:text-dark hover:-translate-y-[3px] transition-all duration-300"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-dark text-white flex items-center justify-center hover:bg-yellow hover:text-dark hover:-translate-y-[3px] transition-all duration-300"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-dark text-white flex items-center justify-center hover:bg-yellow hover:text-dark hover:-translate-y-[3px] transition-all duration-300"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center max-w-3xl mx-auto px-4 mt-10">
+                <p class="font-serif text-muted text-[15px] leading-relaxed font-light italic">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut eaque, laboriosam veritatis, quos non quis ad perspiciatis, totam corporis ea, alias ut unde.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Partners / Logos Section -->
+    <section class="py-[60px] bg-white border-t border-gray-100">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="flex flex-col md:flex-row justify-around items-center gap-10 md:gap-8">
+                <div class="partner-logo">
+                    <a href="#"><img src="../resources/logos/envato.jpg" alt="Envato" class="max-h-10 w-auto grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all duration-300"></a>
+                </div>
+                <div class="partner-logo">
+                    <a href="#"><img src="../resources/logos/designmodo.jpg" alt="Designmodo" class="max-h-10 w-auto grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all duration-300"></a>
+                </div>
+                <div class="partner-logo">
+                    <a href="#"><img src="../resources/logos/themeforest.jpg" alt="ThemeForest" class="max-h-10 w-auto grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all duration-300"></a>
+                </div>
+                <div class="partner-logo">
+                    <a href="#"><img src="../resources/logos/creative-market.jpg" alt="Creative Market" class="max-h-10 w-auto grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all duration-300"></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-6 bg-white">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="grid grid-cols-1 lg:grid-cols-3 items-center text-center gap-6">
+                <div class="text-sm text-gray-700 lg:text-left">
+                    Copyright &copy; Your Website 2020
+                </div>
+                <div class="flex justify-center gap-4">
+                    <a href="#" class="w-10 h-10 rounded-full bg-dark text-white flex items-center justify-center hover:bg-yellow hover:text-dark hover:-translate-y-[3px] transition-all duration-300"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="w-10 h-10 rounded-full bg-dark text-white flex items-center justify-center hover:bg-yellow hover:text-dark hover:-translate-y-[3px] transition-all duration-300"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="w-10 h-10 rounded-full bg-dark text-white flex items-center justify-center hover:bg-yellow hover:text-dark hover:-translate-y-[3px] transition-all duration-300"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+                <div class="text-sm lg:text-right font-medium flex justify-center lg:justify-end gap-5">
+                    <a href="#" class="text-yellow hover:text-yellow-light hover:underline">Privacy Policy</a>
+                    <a href="#" class="text-yellow hover:text-yellow-light hover:underline">Terms of Use</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Portfolio Modals -->
+    <!-- Modal 1 -->
+    <div id="portfolio-modal-1" class="fixed inset-0 bg-black/70 z-[2000] hidden items-start justify-center overflow-y-auto px-4 py-16 transition-all duration-300 portfolio-modal-overlay">
+        <div class="bg-white max-w-3xl w-full rounded relative p-10 md:p-16 shadow-2xl m-auto animate-modalFadeIn">
+            <div class="absolute top-6 right-6 text-4xl cursor-pointer text-muted hover:text-dark transition-colors duration-200 close-modal-btn">&times;</div>
+            <div class="text-center">
+                <h2 class="text-3xl md:text-4xl font-bold font-montserrat mb-1 tracking-wider uppercase">THREADS</h2>
+                <p class="font-serif italic text-base text-muted mb-8">Illustration</p>
+                <img src="../resources/portfolio/01-full.jpg" alt="Threads Project" class="max-w-full rounded mb-8 mx-auto">
+                <p class="text-muted text-[15px] leading-relaxed mb-8 max-w-2xl mx-auto">Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem a aut vero eos, corporis nihil libero soluta, card nisi laboriosam, sapiente optio minus soluta.</p>
+                <ul class="list-none p-0 mb-8 text-[14.5px] text-dark">
+                    <li class="mb-2"><strong>Date:</strong> January 2020</li>
+                    <li class="mb-2"><strong>Client:</strong> Threads</li>
+                    <li class="mb-2"><strong>Category:</strong> Illustration</li>
+                </ul>
+                <button class="inline-block font-montserrat font-bold text-center py-4 px-8 text-[14px] rounded bg-yellow text-white uppercase hover:bg-yellow-light hover:scale-[1.02] transition-all duration-300 cursor-pointer modal-close-action-btn flex items-center gap-2 mx-auto"><i class="fas fa-times"></i> Close Project</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal 2 -->
+    <div id="portfolio-modal-2" class="fixed inset-0 bg-black/70 z-[2000] hidden items-start justify-center overflow-y-auto px-4 py-16 transition-all duration-300 portfolio-modal-overlay">
+        <div class="bg-white max-w-3xl w-full rounded relative p-10 md:p-16 shadow-2xl m-auto animate-modalFadeIn">
+            <div class="absolute top-6 right-6 text-4xl cursor-pointer text-muted hover:text-dark transition-colors duration-200 close-modal-btn">&times;</div>
+            <div class="text-center">
+                <h2 class="text-3xl md:text-4xl font-bold font-montserrat mb-1 tracking-wider uppercase">EXPLORE</h2>
+                <p class="font-serif italic text-base text-muted mb-8">Graphic Design</p>
+                <img src="../resources/portfolio/02-full.jpg" alt="Explore Project" class="max-w-full rounded mb-8 mx-auto">
+                <p class="text-muted text-[15px] leading-relaxed mb-8 max-w-2xl mx-auto">Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem a aut vero eos, corporis nihil libero soluta, card nisi laboriosam, sapiente optio minus soluta.</p>
+                <ul class="list-none p-0 mb-8 text-[14.5px] text-dark">
+                    <li class="mb-2"><strong>Date:</strong> January 2020</li>
+                    <li class="mb-2"><strong>Client:</strong> Explore</li>
+                    <li class="mb-2"><strong>Category:</strong> Graphic Design</li>
+                </ul>
+                <button class="inline-block font-montserrat font-bold text-center py-4 px-8 text-[14px] rounded bg-yellow text-white uppercase hover:bg-yellow-light hover:scale-[1.02] transition-all duration-300 cursor-pointer modal-close-action-btn flex items-center gap-2 mx-auto"><i class="fas fa-times"></i> Close Project</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal 3 -->
+    <div id="portfolio-modal-3" class="fixed inset-0 bg-black/70 z-[2000] hidden items-start justify-center overflow-y-auto px-4 py-16 transition-all duration-300 portfolio-modal-overlay">
+        <div class="bg-white max-w-3xl w-full rounded relative p-10 md:p-16 shadow-2xl m-auto animate-modalFadeIn">
+            <div class="absolute top-6 right-6 text-4xl cursor-pointer text-muted hover:text-dark transition-colors duration-200 close-modal-btn">&times;</div>
+            <div class="text-center">
+                <h2 class="text-3xl md:text-4xl font-bold font-montserrat mb-1 tracking-wider uppercase">FINISH</h2>
+                <p class="font-serif italic text-base text-muted mb-8">Identity</p>
+                <img src="../resources/portfolio/03-full.jpg" alt="Finish Project" class="max-w-full rounded mb-8 mx-auto">
+                <p class="text-muted text-[15px] leading-relaxed mb-8 max-w-2xl mx-auto">Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem a aut vero eos, corporis nihil libero soluta, card nisi laboriosam, sapiente optio minus soluta.</p>
+                <ul class="list-none p-0 mb-8 text-[14.5px] text-dark">
+                    <li class="mb-2"><strong>Date:</strong> January 2020</li>
+                    <li class="mb-2"><strong>Client:</strong> Finish</li>
+                    <li class="mb-2"><strong>Category:</strong> Identity</li>
+                </ul>
+                <button class="inline-block font-montserrat font-bold text-center py-4 px-8 text-[14px] rounded bg-yellow text-white uppercase hover:bg-yellow-light hover:scale-[1.02] transition-all duration-300 cursor-pointer modal-close-action-btn flex items-center gap-2 mx-auto"><i class="fas fa-times"></i> Close Project</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal 4 -->
+    <div id="portfolio-modal-4" class="fixed inset-0 bg-black/70 z-[2000] hidden items-start justify-center overflow-y-auto px-4 py-16 transition-all duration-300 portfolio-modal-overlay">
+        <div class="bg-white max-w-3xl w-full rounded relative p-10 md:p-16 shadow-2xl m-auto animate-modalFadeIn">
+            <div class="absolute top-6 right-6 text-4xl cursor-pointer text-muted hover:text-dark transition-colors duration-200 close-modal-btn">&times;</div>
+            <div class="text-center">
+                <h2 class="text-3xl md:text-4xl font-bold font-montserrat mb-1 tracking-wider uppercase">LINES</h2>
+                <p class="font-serif italic text-base text-muted mb-8">Branding</p>
+                <img src="../resources/portfolio/04-full.jpg" alt="Lines Project" class="max-w-full rounded mb-8 mx-auto">
+                <p class="text-muted text-[15px] leading-relaxed mb-8 max-w-2xl mx-auto">Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem a aut vero eos, corporis nihil libero soluta, card nisi laboriosam, sapiente optio minus soluta.</p>
+                <ul class="list-none p-0 mb-8 text-[14.5px] text-dark">
+                    <li class="mb-2"><strong>Date:</strong> January 2020</li>
+                    <li class="mb-2"><strong>Client:</strong> Lines</li>
+                    <li class="mb-2"><strong>Category:</strong> Branding</li>
+                </ul>
+                <button class="inline-block font-montserrat font-bold text-center py-4 px-8 text-[14px] rounded bg-yellow text-white uppercase hover:bg-yellow-light hover:scale-[1.02] transition-all duration-300 cursor-pointer modal-close-action-btn flex items-center gap-2 mx-auto"><i class="fas fa-times"></i> Close Project</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal 5 -->
+    <div id="portfolio-modal-5" class="fixed inset-0 bg-black/70 z-[2000] hidden items-start justify-center overflow-y-auto px-4 py-16 transition-all duration-300 portfolio-modal-overlay">
+        <div class="bg-white max-w-3xl w-full rounded relative p-10 md:p-16 shadow-2xl m-auto animate-modalFadeIn">
+            <div class="absolute top-6 right-6 text-4xl cursor-pointer text-muted hover:text-dark transition-colors duration-200 close-modal-btn">&times;</div>
+            <div class="text-center">
+                <h2 class="text-3xl md:text-4xl font-bold font-montserrat mb-1 tracking-wider uppercase">SOUTHWEST</h2>
+                <p class="font-serif italic text-base text-muted mb-8">Website Design</p>
+                <img src="../resources/portfolio/05-full.jpg" alt="Southwest Project" class="max-w-full rounded mb-8 mx-auto">
+                <p class="text-muted text-[15px] leading-relaxed mb-8 max-w-2xl mx-auto">Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem a aut vero eos, corporis nihil libero soluta, card nisi laboriosam, sapiente optio minus soluta.</p>
+                <ul class="list-none p-0 mb-8 text-[14.5px] text-dark">
+                    <li class="mb-2"><strong>Date:</strong> January 2020</li>
+                    <li class="mb-2"><strong>Client:</strong> Southwest</li>
+                    <li class="mb-2"><strong>Category:</strong> Website Design</li>
+                </ul>
+                <button class="inline-block font-montserrat font-bold text-center py-4 px-8 text-[14px] rounded bg-yellow text-white uppercase hover:bg-yellow-light hover:scale-[1.02] transition-all duration-300 cursor-pointer modal-close-action-btn flex items-center gap-2 mx-auto"><i class="fas fa-times"></i> Close Project</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal 6 -->
+    <div id="portfolio-modal-6" class="fixed inset-0 bg-black/70 z-[2000] hidden items-start justify-center overflow-y-auto px-4 py-16 transition-all duration-300 portfolio-modal-overlay">
+        <div class="bg-white max-w-3xl w-full rounded relative p-10 md:p-16 shadow-2xl m-auto animate-modalFadeIn">
+            <div class="absolute top-6 right-6 text-4xl cursor-pointer text-muted hover:text-dark transition-colors duration-200 close-modal-btn">&times;</div>
+            <div class="text-center">
+                <h2 class="text-3xl md:text-4xl font-bold font-montserrat mb-1 tracking-wider uppercase">WINDOW</h2>
+                <p class="font-serif italic text-base text-muted mb-8">Photography</p>
+                <img src="../resources/portfolio/06-full.jpg" alt="Window Project" class="max-w-full rounded mb-8 mx-auto">
+                <p class="text-muted text-[15px] leading-relaxed mb-8 max-w-2xl mx-auto">Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem a aut vero eos, corporis nihil libero soluta, card nisi laboriosam, sapiente optio minus soluta.</p>
+                <ul class="list-none p-0 mb-8 text-[14.5px] text-dark">
+                    <li class="mb-2"><strong>Date:</strong> January 2020</li>
+                    <li class="mb-2"><strong>Client:</strong> Window</li>
+                    <li class="mb-2"><strong>Category:</strong> Photography</li>
+                </ul>
+                <button class="inline-block font-montserrat font-bold text-center py-4 px-8 text-[14px] rounded bg-yellow text-white uppercase hover:bg-yellow-light hover:scale-[1.02] transition-all duration-300 cursor-pointer modal-close-action-btn flex items-center gap-2 mx-auto"><i class="fas fa-times"></i> Close Project</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Custom Script -->
+    <script src="main.js"></script>
+</body>
+</html>

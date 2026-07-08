@@ -1,0 +1,395 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Caterpillar - Studio Website</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto+Slab:wght@300;400;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar" id="navbar">
+        <div class="container navbar-container">
+            <a href="#" class="navbar-brand">
+                <img src="../resources/navbar-logo.png" alt="CATERPILLAR" id="navbar-logo-img">
+            </a>
+            <button class="navbar-toggler" id="menu-btn">
+                MENU <i class="fas fa-bars"></i>
+            </button>
+            <ul class="navbar-nav" id="navbar-links">
+                <li><a href="#services">SERVICES</a></li>
+                <li><a href="#portfolio">PORTFOLIO</a></li>
+                <li><a href="#about">ABOUT</a></li>
+                <li><a href="#team">TEAM</a></li>
+                <li><a href="#contact">CONTACT</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Header / Hero Section -->
+    <header class="hero">
+        <div class="container hero-container">
+            <div class="hero-lead-in">Welcome To Our Studio!</div>
+            <h1 class="hero-heading"><span class="nobreak">IT'S NICE TO MEET</span> <br class="mobile-br">YOU</h1>
+            <a href="#services" class="btn btn-yellow hero-btn">TELL ME MORE</a>
+        </div>
+    </header>
+
+    <!-- Services Section -->
+    <section id="services" class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2>SERVICES</h2>
+                <p class="section-subheader">Lorem ipsum dolor sit amet consectetur.</p>
+            </div>
+            <div class="services-grid">
+                <!-- Service 1 -->
+                <div class="service-item">
+                    <div class="service-icon-wrapper">
+                        <i class="fas fa-shopping-cart service-icon"></i>
+                    </div>
+                    <h3>E-Commerce</h3>
+                    <p class="service-desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.</p>
+                </div>
+                <!-- Service 2 -->
+                <div class="service-item">
+                    <div class="service-icon-wrapper">
+                        <i class="fas fa-laptop service-icon"></i>
+                    </div>
+                    <h3>Responsive Design</h3>
+                    <p class="service-desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.</p>
+                </div>
+                <!-- Service 3 -->
+                <div class="service-item">
+                    <div class="service-icon-wrapper">
+                        <i class="fas fa-lock service-icon"></i>
+                    </div>
+                    <h3>Web Security</h3>
+                    <p class="service-desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="section bg-light">
+        <div class="container">
+            <div class="section-header">
+                <h2>PORTFOLIO</h2>
+                <p class="section-subheader">Lorem ipsum dolor sit amet consectetur.</p>
+            </div>
+            <div class="portfolio-grid">
+                <!-- Project 1 -->
+                <div class="portfolio-item" data-modal="portfolio-modal-1">
+                    <div class="portfolio-link">
+                        <div class="portfolio-hover">
+                            <div class="portfolio-hover-content">
+                                <i class="fas fa-plus fa-3x"></i>
+                            </div>
+                        </div>
+                        <img class="img-fluid" src="../resources/portfolio/01-thumbnail.jpg" alt="Threads">
+                    </div>
+                    <div class="portfolio-caption">
+                        <h4>Threads</h4>
+                        <p class="text-muted">Illustration</p>
+                    </div>
+                </div>
+                <!-- Project 2 -->
+                <div class="portfolio-item" data-modal="portfolio-modal-2">
+                    <div class="portfolio-link">
+                        <div class="portfolio-hover">
+                            <div class="portfolio-hover-content">
+                                <i class="fas fa-plus fa-3x"></i>
+                            </div>
+                        </div>
+                        <img class="img-fluid" src="../resources/portfolio/02-thumbnail.jpg" alt="Explore">
+                    </div>
+                    <div class="portfolio-caption">
+                        <h4>Explore</h4>
+                        <p class="text-muted">Graphic Design</p>
+                    </div>
+                </div>
+                <!-- Project 3 -->
+                <div class="portfolio-item" data-modal="portfolio-modal-3">
+                    <div class="portfolio-link">
+                        <div class="portfolio-hover">
+                            <div class="portfolio-hover-content">
+                                <i class="fas fa-plus fa-3x"></i>
+                            </div>
+                        </div>
+                        <img class="img-fluid" src="../resources/portfolio/03-thumbnail.jpg" alt="Finish">
+                    </div>
+                    <div class="portfolio-caption">
+                        <h4>Finish</h4>
+                        <p class="text-muted">Identity</p>
+                    </div>
+                </div>
+                <!-- Project 4 -->
+                <div class="portfolio-item" data-modal="portfolio-modal-4">
+                    <div class="portfolio-link">
+                        <div class="portfolio-hover">
+                            <div class="portfolio-hover-content">
+                                <i class="fas fa-plus fa-3x"></i>
+                            </div>
+                        </div>
+                        <img class="img-fluid" src="../resources/portfolio/04-thumbnail.jpg" alt="Lines">
+                    </div>
+                    <div class="portfolio-caption">
+                        <h4>Lines</h4>
+                        <p class="text-muted">Branding</p>
+                    </div>
+                </div>
+                <!-- Project 5 -->
+                <div class="portfolio-item" data-modal="portfolio-modal-5">
+                    <div class="portfolio-link">
+                        <div class="portfolio-hover">
+                            <div class="portfolio-hover-content">
+                                <i class="fas fa-plus fa-3x"></i>
+                            </div>
+                        </div>
+                        <img class="img-fluid" src="../resources/portfolio/05-thumbnail.jpg" alt="Southwest">
+                    </div>
+                    <div class="portfolio-caption">
+                        <h4>Southwest</h4>
+                        <p class="text-muted">Website Design</p>
+                    </div>
+                </div>
+                <!-- Project 6 -->
+                <div class="portfolio-item" data-modal="portfolio-modal-6">
+                    <div class="portfolio-link">
+                        <div class="portfolio-hover">
+                            <div class="portfolio-hover-content">
+                                <i class="fas fa-plus fa-3x"></i>
+                            </div>
+                        </div>
+                        <img class="img-fluid" src="../resources/portfolio/06-thumbnail.jpg" alt="Window">
+                    </div>
+                    <div class="portfolio-caption">
+                        <h4>Window</h4>
+                        <p class="text-muted">Photography</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Section -->
+    <section id="team" class="section bg-light">
+        <div class="container">
+            <div class="section-header">
+                <h2>OUR AMAZING TEAM</h2>
+                <p class="section-subheader">Lorem ipsum dolor sit amet consectetur.</p>
+            </div>
+            <div class="team-grid">
+                <!-- Member 1 -->
+                <div class="team-member">
+                    <div class="team-photo-wrapper">
+                        <img src="../resources/team/1.jpg" alt="Kay Garland">
+                    </div>
+                    <h4>Kay Garland</h4>
+                    <p class="team-role">Lead Designer</p>
+                    <div class="team-social">
+                        <a href="#" class="social-btn"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-btn"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-btn"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <!-- Member 2 -->
+                <div class="team-member">
+                    <div class="team-photo-wrapper">
+                        <img src="../resources/team/2.jpg" alt="Larry Parker">
+                    </div>
+                    <h4>Larry Parker</h4>
+                    <p class="team-role">Lead Marketer</p>
+                    <div class="team-social">
+                        <a href="#" class="social-btn"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-btn"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-btn"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <!-- Member 3 -->
+                <div class="team-member">
+                    <div class="team-photo-wrapper">
+                        <img src="../resources/team/3.jpg" alt="Diana Petersen">
+                    </div>
+                    <h4>Diana Petersen</h4>
+                    <p class="team-role">Lead Developer</p>
+                    <div class="team-social">
+                        <a href="#" class="social-btn"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-btn"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-btn"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="team-footer-text-wrapper">
+                <p class="team-footer-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut eaque, laboriosam veritatis, quos non quis ad perspiciatis, totam corporis ea, alias ut unde.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Partners / Logos Section -->
+    <section class="partners-section">
+        <div class="container">
+            <div class="partners-grid">
+                <div class="partner-logo">
+                    <a href="#"><img src="../resources/logos/envato.jpg" alt="Envato"></a>
+                </div>
+                <div class="partner-logo">
+                    <a href="#"><img src="../resources/logos/designmodo.jpg" alt="Designmodo"></a>
+                </div>
+                <div class="partner-logo">
+                    <a href="#"><img src="../resources/logos/themeforest.jpg" alt="ThemeForest"></a>
+                </div>
+                <div class="partner-logo">
+                    <a href="#"><img src="../resources/logos/creative-market.jpg" alt="Creative Market"></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-copyright">
+                    Copyright &copy; Your Website 2020
+                </div>
+                <div class="footer-social">
+                    <a href="#" class="social-btn-dark"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="social-btn-dark"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="social-btn-dark"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+                <div class="footer-links">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Use</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Portfolio Modals -->
+    <!-- Modal 1 -->
+    <div id="portfolio-modal-1" class="portfolio-modal-overlay">
+        <div class="portfolio-modal-container">
+            <div class="close-modal-btn">&times;</div>
+            <div class="portfolio-modal-content">
+                <h2>THREADS</h2>
+                <p class="modal-subheader">Illustration</p>
+                <img src="../resources/portfolio/01-full.jpg" alt="Threads Project">
+                <p class="modal-description">Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem a aut vero eos, corporis nihil libero soluta, card nisi laboriosam, sapiente optio minus soluta.</p>
+                <ul class="modal-details">
+                    <li><strong>Date:</strong> January 2020</li>
+                    <li><strong>Client:</strong> Threads</li>
+                    <li><strong>Category:</strong> Illustration</li>
+                </ul>
+                <button class="btn btn-yellow modal-close-action-btn"><i class="fas fa-times"></i> Close Project</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal 2 -->
+    <div id="portfolio-modal-2" class="portfolio-modal-overlay">
+        <div class="portfolio-modal-container">
+            <div class="close-modal-btn">&times;</div>
+            <div class="portfolio-modal-content">
+                <h2>EXPLORE</h2>
+                <p class="modal-subheader">Graphic Design</p>
+                <img src="../resources/portfolio/02-full.jpg" alt="Explore Project">
+                <p class="modal-description">Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem a aut vero eos, corporis nihil libero soluta, card nisi laboriosam, sapiente optio minus soluta.</p>
+                <ul class="modal-details">
+                    <li><strong>Date:</strong> January 2020</li>
+                    <li><strong>Client:</strong> Explore</li>
+                    <li><strong>Category:</strong> Graphic Design</li>
+                </ul>
+                <button class="btn btn-yellow modal-close-action-btn"><i class="fas fa-times"></i> Close Project</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal 3 -->
+    <div id="portfolio-modal-3" class="portfolio-modal-overlay">
+        <div class="portfolio-modal-container">
+            <div class="close-modal-btn">&times;</div>
+            <div class="portfolio-modal-content">
+                <h2>FINISH</h2>
+                <p class="modal-subheader">Identity</p>
+                <img src="../resources/portfolio/03-full.jpg" alt="Finish Project">
+                <p class="modal-description">Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem a aut vero eos, corporis nihil libero soluta, card nisi laboriosam, sapiente optio minus soluta.</p>
+                <ul class="modal-details">
+                    <li><strong>Date:</strong> January 2020</li>
+                    <li><strong>Client:</strong> Finish</li>
+                    <li><strong>Category:</strong> Identity</li>
+                </ul>
+                <button class="btn btn-yellow modal-close-action-btn"><i class="fas fa-times"></i> Close Project</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal 4 -->
+    <div id="portfolio-modal-4" class="portfolio-modal-overlay">
+        <div class="portfolio-modal-container">
+            <div class="close-modal-btn">&times;</div>
+            <div class="portfolio-modal-content">
+                <h2>LINES</h2>
+                <p class="modal-subheader">Branding</p>
+                <img src="../resources/portfolio/04-full.jpg" alt="Lines Project">
+                <p class="modal-description">Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem a aut vero eos, corporis nihil libero soluta, card nisi laboriosam, sapiente optio minus soluta.</p>
+                <ul class="modal-details">
+                    <li><strong>Date:</strong> January 2020</li>
+                    <li><strong>Client:</strong> Lines</li>
+                    <li><strong>Category:</strong> Branding</li>
+                </ul>
+                <button class="btn btn-yellow modal-close-action-btn"><i class="fas fa-times"></i> Close Project</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal 5 -->
+    <div id="portfolio-modal-5" class="portfolio-modal-overlay">
+        <div class="portfolio-modal-container">
+            <div class="close-modal-btn">&times;</div>
+            <div class="portfolio-modal-content">
+                <h2>SOUTHWEST</h2>
+                <p class="modal-subheader">Website Design</p>
+                <img src="../resources/portfolio/05-full.jpg" alt="Southwest Project">
+                <p class="modal-description">Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem a aut vero eos, corporis nihil libero soluta, card nisi laboriosam, sapiente optio minus soluta.</p>
+                <ul class="modal-details">
+                    <li><strong>Date:</strong> January 2020</li>
+                    <li><strong>Client:</strong> Southwest</li>
+                    <li><strong>Category:</strong> Website Design</li>
+                </ul>
+                <button class="btn btn-yellow modal-close-action-btn"><i class="fas fa-times"></i> Close Project</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal 6 -->
+    <div id="portfolio-modal-6" class="portfolio-modal-overlay">
+        <div class="portfolio-modal-container">
+            <div class="close-modal-btn">&times;</div>
+            <div class="portfolio-modal-content">
+                <h2>WINDOW</h2>
+                <p class="modal-subheader">Photography</p>
+                <img src="../resources/portfolio/06-full.jpg" alt="Window Project">
+                <p class="modal-description">Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem a aut vero eos, corporis nihil libero soluta, card nisi laboriosam, sapiente optio minus soluta.</p>
+                <ul class="modal-details">
+                    <li><strong>Date:</strong> January 2020</li>
+                    <li><strong>Client:</strong> Window</li>
+                    <li><strong>Category:</strong> Photography</li>
+                </ul>
+                <button class="btn btn-yellow modal-close-action-btn"><i class="fas fa-times"></i> Close Project</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Custom Script -->
+    <script src="main.js"></script>
+</body>
+</html>
+
